@@ -18,7 +18,7 @@ Ensure that your code is well typed where possible.
 
 ## Tool / technologies used
 
-- Glamorous for JS in CSS styling
+- ~Glamorous~ Emotion for JS in CSS styling
 - Storybook
 - Next.js
 - storybook
