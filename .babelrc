@@ -1,0 +1,29 @@
+{
+  "env": {
+    "browser": {
+      "presets": [
+        "next/babel",
+        "@zeit/next-typescript/babel"
+      ],
+      "plugins": [
+        ["module-resolver", {
+          "root": ["./src"],
+          "alias": {
+            "style": "./style"
+          }
+        }]
+      ]
+    }
+  },
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "style": "./style"
+      }
+    }]
+  ]
+}

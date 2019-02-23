@@ -1,0 +1,30 @@
+{
+    "extends": ["tslint:latest", "tslint-react"],
+    "rules": {
+      "no-submodule-imports": [
+        true,
+        "next",
+        "glamor",
+        "components",
+        "style",
+        "src",
+        "types",
+        "brand",
+        "sdk"
+      ],
+      "no-implicit-dependencies": false,
+      "interface-name": false,
+      "indent": [true, "spaces", 2],
+      "variable-name": [
+        true,
+        "allow-leading-underscore",
+        "allow-pascal-case",
+        "allow-snake-case"
+      ],
+      "jsx-no-multiline-js": false,
+      "trailing-comma": false
+    },
+    "linterOptions": {
+      "exclude": [".next", "production-server/*", ".storybook", "style"]
+    }
+}
