@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import React from "react";
 import Search from "./index";
 
-storiesOf("Elements/Search", module)
+storiesOf("Search", module)
   .add("default", () => (
     <Search
       autoFocus={true}

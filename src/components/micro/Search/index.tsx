@@ -11,7 +11,7 @@ interface State {
   value: string;
 }
 
-class Search extends React.Component {
+class Search extends React.Component<Props, State> {
   public props: Props;
   public state: State;
 

@@ -15,3 +15,11 @@ should go into `compound` package.
 Prefer to write tests where possible for complex components that consume API data. (This maybe relaxed due to time limit issues)
 
 Ensure that your code is well typed where possible.
+
+## Tool / technologies used
+
+- Glamorous for JS in CSS styling
+- Storybook
+- Next.js
+- storybook
+- Semantic-ui
