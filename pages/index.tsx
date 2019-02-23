@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Layout from "src/components/Layout";
 
-const PostLink = (props) => (
+const PostLink = (props) => ( // TODO: this should have been a separate component
     <li>
       <Link as={`/p/${props.id}`} href={`/post?title=${props.id}`}>
         <a>{props.title}</a>
