@@ -1,6 +1,7 @@
 {
-    "plugins": [
-      ["module-resolver", {
+  "plugins": [
+    ["emotion"],
+    ["module-resolver", {
         "root": ["./src"],
         "alias": {
           "style": "./style"
@@ -8,4 +9,3 @@
       }]
     ]
 }
-  

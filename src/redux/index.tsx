@@ -1,11 +1,15 @@
-import {combineReducers, createStore, Store} from "redux";
-import {reducer as formReducer} from "redux-form";
+import {createStore, Store} from "redux";
 
 let store = null;
 
-const reducer = combineReducers({
-  form: formReducer,
-});
+const reducer = (state: any, action: any): any => {
+  switch (action.type) {
+    case "ADD_ACTION":
+      return state;
+    default:
+      return state;
+  }
+};
 
 export const configureStore = (initialState: any = {}): Store => {
   if (!store) {

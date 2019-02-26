@@ -11,7 +11,8 @@
           "alias": {
             "style": "./style"
           }
-        }]
+        }],
+        ["emotion"]
       ]
     }
   },

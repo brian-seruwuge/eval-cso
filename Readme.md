@@ -2,7 +2,7 @@
 
 ## Installation and setup
 
-Run `npm install` to install dependencies
+Run `npm install` to install dependencies (prefer npm to yarn)
 Run `npm start` or `npm run dev` to start application, by default port 3000 is used.
 Run `npm run storybook` to view component storybooks.
 
@@ -23,3 +23,7 @@ Ensure that your code is well typed where possible.
 - Next.js
 - storybook
 - Semantic-ui
+
+## Gotchas 
+
+- core-js is required by storybook as a peer dev-dependencies [see](https://github.com/storybooks/storybook/issues/3805)
