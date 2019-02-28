@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/freelyformd/eval-cso.svg?style=svg)](https://circleci.com/gh/freelyformd/eval-cso)
+
 # Frontend for customer service officer evaluation tool
 
 ## Installation and setup
