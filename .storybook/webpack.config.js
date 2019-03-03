@@ -1,5 +1,10 @@
-const path = require('path')
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const path = require('path');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
+const TS_CONFIG_FILE = path.join(__dirname, "../tsconfig.json");
+
+const ROOT_DIR = path.join(__dirname, "./");
+const NODE_MODULES_DIR = path.join(__dirname, "../node_modules");
 
 module.exports = ({config, mode}) => {
   config.module.rules.push({
@@ -10,12 +15,14 @@ module.exports = ({config, mode}) => {
     },
   });
 
-  config.module.rules.push({
-    test: /\.less$/,
-    loaders: ['style-loader', 'css-loader', 'less-loader'],
-  });
-
   config.resolve.extensions.push('.ts', '.tsx');
+
+  config.resolve.alias = {
+    ...config.resolve.alias || {},
+
+    "components": path.join(__dirname, "../src/components"),
+  };
+
 
   config.plugins.push(
     new ForkTsCheckerWebpackPlugin({

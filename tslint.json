@@ -1,5 +1,5 @@
 {
-    "extends": ["tslint:latest", "tslint-react"],
+  "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
     "rules": {
       "no-submodule-imports": [
         true,
@@ -13,6 +13,7 @@
         "sdk"
       ],
       "no-implicit-dependencies": false,
+      "object-literal-sort-keys": false,
       "interface-name": false,
       "indent": [true, "spaces", 2],
       "variable-name": [

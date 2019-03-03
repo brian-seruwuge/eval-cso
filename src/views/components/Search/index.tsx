@@ -19,22 +19,27 @@ class Search extends React.Component<Props, State> {
     super(props);
 
     this.state = {
-      value: null,
+      value: null
     };
   }
 
-  public onChange = (e) => {
-    this.setState({value: e.target.value});
-  }
+  public onChange = e => {
+    this.setState({ value: e.target.value });
+  };
 
-  public onSubmit = (e) => {
+  public onSubmit = e => {
     e.preventDefault();
     this.props.onChange(this.state.value);
-  }
+  };
 
   public render() {
     return (
-      <Segment onSubmit={this.onSubmit} as="form" padded={false} style={{marginTop: "2em", padding: "0.5em"}}>
+      <Segment
+        onSubmit={this.onSubmit}
+        as="form"
+        padded={false}
+        style={{ marginTop: "2em", padding: "0.5em" }}
+      >
         <Input
           fluid={true}
           transparent={true}
