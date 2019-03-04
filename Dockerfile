@@ -17,5 +17,5 @@ WORKDIR "/app/"
 RUN yarn
 RUN npm run build
 
-RUN chmod +x ./entrypoint.sh
+RUN npm run start
 

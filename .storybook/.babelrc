@@ -1,11 +1,11 @@
 {
   "plugins": [
-    ["emotion"],
     ["module-resolver", {
-        "root": ["./src"],
-        "alias": {
-          "style": "./style"
-        }
-      }]
-    ]
+      "root": ["./"],
+      "alias": {
+        "src": "./src",
+        "style": "./style"
+      }
+    }]
+  ]
 }

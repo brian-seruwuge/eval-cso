@@ -5,8 +5,8 @@ import NavMenu, { vertical } from ".";
 const items = [
   { name: "Call Quality", id: "call-quality" },
   { name: "SMS Quality", id: "sms-quality" },
-  { name: "Email Quality", id: "sms-quality" },
-  { name: "Claims Quality", id: "sms-quality" }
+  { name: "Email Quality", id: "email-quality" },
+  { name: "Claims Quality", id: "claims-quality" }
 ];
 
 // tslint:disable no-console
