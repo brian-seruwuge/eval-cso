@@ -8,3 +8,7 @@ body {
 .ui.form .field label {
     color:white;
 }
+
+.ui.header {
+  color: white
+}
