@@ -20,8 +20,7 @@ class LoginForm extends React.Component<Props, Credentials> {
     this.state = {
       email: "",
       password: ""
-    }
-
+    };
   }
 
   public handleInput = event => {
@@ -42,41 +41,41 @@ class LoginForm extends React.Component<Props, Credentials> {
   };
 
   public render() {
-    return(
-        <div>
-          <Header as="h3" textAlign="center">
-            Sign In
-          </Header>
-          <Form onSubmit={this.handleSubmitForm}>
-            <Form.Field>
-              <Input
-                icon="user"
-                iconPosition="left"
-                type="email"
-                name="email"
-                value={this.state.email}
-                placeholder="Email address"
-                autoFocus={true}
-                onChange={this.handleInput}
-                required={true}
-              />
-            </Form.Field>
-            <Form.Field>
-              <Input
-                icon="lock"
-                iconPosition="left"
-                type="password"
-                name="password"
-                value={this.state.password}
-                placeholder="Password"
-                onChange={this.handleInput}
-                required={true}
-              />
-            </Form.Field>
-            <Button type="submit">Login</Button>
-          </Form>
-        </div>
-      );
+    return (
+      <div>
+        <Header as="h3" textAlign="center">
+          Sign In
+        </Header>
+        <Form onSubmit={this.handleSubmitForm}>
+          <Form.Field>
+            <Input
+              icon="user"
+              iconPosition="left"
+              type="email"
+              name="email"
+              value={this.state.email}
+              placeholder="Email address"
+              autoFocus={true}
+              onChange={this.handleInput}
+              required={true}
+            />
+          </Form.Field>
+          <Form.Field>
+            <Input
+              icon="lock"
+              iconPosition="left"
+              type="password"
+              name="password"
+              value={this.state.password}
+              placeholder="Password"
+              onChange={this.handleInput}
+              required={true}
+            />
+          </Form.Field>
+          <Button type="submit">Login</Button>
+        </Form>
+      </div>
+    );
   }
 }
 
