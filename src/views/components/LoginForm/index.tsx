@@ -12,9 +12,6 @@ interface Props {
 }
 
 class LoginForm extends React.Component<Props, Credentials> {
-  public props: Props;
-  public state: Credentials;
-
   constructor(props) {
     super(props);
     this.state = {
