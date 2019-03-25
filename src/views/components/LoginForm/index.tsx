@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form, Header, Input } from "semantic-ui-react";
 
-interface Credentials {
+export interface Credentials {
   email: string;
   password: string;
 }
@@ -62,7 +62,7 @@ function LoginForm(props: Props): any {
             required={true}
           />
         </Form.Field>
-        <Button type="submit">Login</Button>
+        <Button type="submit" onClick={this.submitForm}>Login</Button>
       </Form>
     </div>
   );
