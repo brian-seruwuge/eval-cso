@@ -4,11 +4,10 @@ import React from "react";
 import Profile from "./index";
 
 const roleOptions = [
-  { text: "Users", key: "users" },
   { text: "Admin", key: "admin" },
-  { text: "Evaluators", key: "evaluators" },
-  { text: "Supervisors", key: "supervisors" },
-  { text: "Agents", key: "agents" }
+  { text: "Evaluator", key: "evaluator" },
+  { text: "Supervisor", key: "supervisor" },
+  { text: "Agent", key: "agent" }
 ];
 
 const profile = {
@@ -16,7 +15,7 @@ const profile = {
   email: "aleku399@gmail.com",
   password: "captain-marvel",
   role: "Supervisors"
-}
+};
 
 storiesOf("components/Profile", module).add("default", () => (
   <Profile
@@ -26,4 +25,3 @@ storiesOf("components/Profile", module).add("default", () => (
     profile={profile}
   />
 ));
-

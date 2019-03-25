@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Button,
-  Container,
-  Form,
-  Input,
-  Select
-} from "semantic-ui-react";
+import { Button, Container, Form, Input, Select } from "semantic-ui-react";
 
 export interface Opt {
   key: string;
@@ -34,9 +28,9 @@ class Profile extends React.Component<Props, State> {
 
     this.state = {
       userName: this.props.profile.user,
-      password:  this.props.profile.password,
-      email:  this.props.profile.email,
-      role:  this.props.profile.role
+      password: this.props.profile.password,
+      email: this.props.profile.email,
+      role: this.props.profile.role
     };
   }
 
@@ -60,11 +54,22 @@ class Profile extends React.Component<Props, State> {
   };
 
   public render() {
-    const {role} = this.state
-    const options: Opt[] = (role === "Admin") ? this.props.roleOptions :
-    (role === "Evaluators") ?  this.props.roleOptions.filter(opt => opt.text !== "Admin") :
-    (role === "Supervisors") ? this.props.roleOptions.filter(opt => opt.text !== "Admin" && opt.text !== "Evaluators") :
-    this.props.roleOptions.filter(opt => opt.text !== "Admin" && opt.text !== "Evaluators" && opt.text === "Supervisors")
+    const { role } = this.state;
+    const options: Opt[] =
+      role === "Admin"
+        ? this.props.roleOptions
+        : role === "Evaluator"
+        ? this.props.roleOptions.filter(opt => opt.text !== "Admin")
+        : role === "Supervisor"
+        ? this.props.roleOptions.filter(
+            opt => opt.text !== "Admin" && opt.text !== "Evaluator"
+          )
+        : this.props.roleOptions.filter(
+            opt =>
+              opt.text !== "Admin" &&
+              opt.text !== "Evaluator" &&
+              opt.text === "Supervisor"
+          );
     return (
       <Container>
         <Form onSubmit={this.handleSubmit}>
@@ -108,8 +113,8 @@ class Profile extends React.Component<Props, State> {
             <Select
               placeholder="Select your role"
               options={options}
-              // value={this.state.role}
-              // onChange={this.handleInput}
+              value={this.state.role}
+              onChange={this.handleInput}
             />
           </Form.Field>
           <Button type="submit">Submit</Button>
@@ -120,4 +125,3 @@ class Profile extends React.Component<Props, State> {
 }
 
 export default Profile;
-
