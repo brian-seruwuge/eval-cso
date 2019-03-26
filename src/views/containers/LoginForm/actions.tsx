@@ -8,11 +8,11 @@ type Password = string;
 
 export type EnterEmail = Action & {
   email: Email
-}
+};
 
 export type EnterPassword = Action & {
   password: Password
-}
+};
 
 export const enterEmail = (email: Email): EnterEmail => ({
   type: ENTER_EMAIL,

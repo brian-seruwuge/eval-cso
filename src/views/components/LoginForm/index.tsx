@@ -62,7 +62,9 @@ function LoginForm(props: Props): any {
             required={true}
           />
         </Form.Field>
-        <Button type="submit" onClick={this.submitForm}>Login</Button>
+        <Button type="submit" onClick={this.submitForm}>
+          Login
+        </Button>
       </Form>
     </div>
   );
