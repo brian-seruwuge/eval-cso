@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { AnyAction,applyMiddleware, createStore, Store } from "redux";
+import { AnyAction, applyMiddleware, createStore, Store } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunkMiddleWare from "redux-thunk";
 import LoginForm, { Credentials } from "../../components/LoginForm/index";
@@ -36,7 +36,7 @@ export const login = connect(mapStateToProps)(LoginForm);
 // if (process.env === "development") {
 // middleWares.push(otherMiddleWare);
 // }
-const middleWares = [thunkMiddleWare]; 
+const middleWares = [thunkMiddleWare];
 const middleWareEnhancer = composeWithDevTools(applyMiddleware(...middleWares));
 
 // if (process.env.NODE !== "production" && module.hot) {
